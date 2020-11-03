@@ -1,5 +1,7 @@
 backend:
-    name: git-gateway
+    name: github
+    repo: DevByRayRay/jam-stack-gatsby-ecommerce-netlify-cms
+    branch: master
 
 # when using the default proxy server port
 local_backend: true
@@ -10,11 +12,11 @@ public_folder: /assets
 collections:
   - name: product
     label: Product
-    folder: products
+    folder: content/products
     create: true
     identifier_field: title
     fields:
       - { name: "title", label: "Title", widget: "string" }
       - { name: "price", label: "Price", widget: "number" }
-      - {label: "Image", name: "thumbnail", widget: "image"}
+      - { name: "thumbnail", label: "Image", widget: "image" }
       - { name: "body", label: "Body", widget: markdown }
